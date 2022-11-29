@@ -20,43 +20,43 @@
     <body>
         <div class="container-fluid p-0"> <!-- вместо падинг 0 -> p-0 -->
             <div class="row m-0"> <!-- remove-margin -> m-0 -->
-                <div class="col-auto p-0 bg-light">
+                <div class="col-2 p-0 bg-light">
                     <div class="bg-white text-center">
                         <a href="http://publications.ue-varna.bg">
                             <img src="https://publications.ue-varna.bg/assets/img/Logo.png" class="img-fluid" alt="Logo"> 
                         </a>
                     </div>
                     <div class="">
-                        <ul class="nav text-white flex-column">
+                        <ul class="nav text-white flex-column accordion" id="stacked-menu">
                             <li class="nav-item bg-light">
                                 <a href="https://publications.ue-varna.bg/home">Начало</a>  
                             </li>
                             <li class="nav-item bg-dark">
                                 <a href="https://publications.ue-varna.bg/news">Новини</a>  
                             </li>
-                            <li class="nav-item bg-dark">
-                                <a href="#" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu">Справки <i class="bi-chevron-down float-end"></i></a>
-                                <ul class="nav nav-pills nav-stacked collapse" id="item2">
-                                    <li class="menu-nested-item ">
-                                        <a href="https://publications.ue-varna.bg/authors">По Преподавател</a>
+                            <li class="nav-item bg-dark accordion-item" >
+                                <button class="accordion-button collapsed" data-bs-target="#item2" data-bs-toggle="collapse">Справки</button>
+                                <ul class="nav flex-column accordion-collapse collapse" id="item2" data-bs-parent="#stacked-menu">
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="https://publications.ue-varna.bg/authors">По Преподавател</a>
                                     </li>
-                                    <li class="menu-nested-item ">
-                                        <a href="https://publications.ue-varna.bg/phd-students">По Докторант</a>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="https://publications.ue-varna.bg/phd-students">По Докторант</a>
                                     </li>
-                                    <li class="menu-nested-item ">
-                                        <a href="https://publications.ue-varna.bg/phd-programmes">По Дoкторска програма</a>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="https://publications.ue-varna.bg/phd-programmes">По Дoкторска програма</a>
                                     </li>
-                                    <li class="menu-nested-item ">
-                                        <a href="https://publications.ue-varna.bg/departments">По Катедра</a>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="https://publications.ue-varna.bg/departments">По Катедра</a>
                                     </li>
-                                    <li class="menu-nested-item ">
-                                        <a href="https://publications.ue-varna.bg/faculties">По Факултет</a>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="https://publications.ue-varna.bg/faculties">По Факултет</a>
                                     </li>
-                                    <li class="menu-nested-item ">
-                                        <a href="https://publications.ue-varna.bg/guest/publications/view">Общо Публикации</a>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="https://publications.ue-varna.bg/guest/publications/view">Общо Публикации</a>
                                     </li>
-                                    <li class="menu-nested-item ">
-                                        <a href="https://publications.ue-varna.bg/statistics">Статистика</a>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="https://publications.ue-varna.bg/statistics">Статистика</a>
                                     </li>
                                 </ul>
                             </li>
