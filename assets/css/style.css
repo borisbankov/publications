@@ -1,0 +1,13 @@
+.left-column{
+	width:250px;
+}
+
+.banner{
+	background:linear-gradient(
+      rgba(150, 197, 198, 0.80),
+      rgba(150, 197, 198, 0.80)
+    ), url('../img/banner.png');
+	height:409px;
+	/*filter:;*/
+	
+}
