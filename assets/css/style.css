@@ -8,6 +8,13 @@
       rgba(150, 197, 198, 0.80)
     ), url('../img/banner.png');
 	height:409px;
-	/*filter:;*/
-	
+	/*filter:;*/	
+}
+
+.project-container{
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.95) 50%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 100%), url('../img/project.png') no-repeat;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 600px;
+    /*max-height: 600px;*/
 }
