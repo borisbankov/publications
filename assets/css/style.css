@@ -1,5 +1,6 @@
 .left-column{
-	width:250px;
+	width:100%;
+  box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .banner{
@@ -17,4 +18,23 @@
     background-position: bottom;
     min-height: 600px;
     /*max-height: 600px;*/
+}
+
+.list-group-item-action:hover, #accordion-menu-item:hover{
+  background-color: var(--bs-lightgreen)!important;
+}
+#accordion-menu-item + ul.accordion-collapse:hover, #accordion-menu-item + ul.accordion-collapse:hover li a{
+  background-color: var(--bs-lightgreen)!important;
+}
+#accordion-menu-item + ul.accordion-collapse:hover li a:hover{
+  background-color: var(--bs-brightgreen)!important;
+}
+.accordion-button:not(.collapsed){
+  background-color: var(--bs-lightgreen)!important;
+}
+
+@media screen and (min-width:768px){
+  .left-column{
+    width:250px;
+  }
 }
