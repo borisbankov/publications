@@ -1,532 +1,208 @@
-
 <!-- Design by  -->
-
 <!DOCTYPE html>
 <html lang="bg">
     <head>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
-        
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-        <meta name="description" content="Списък публикации по автори, преподаватели в ИУ-Варна"/>                   
-        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/cmsv5.css">
-
-        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/normalize.css">
-
-        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/clickmap.css">
-     
-        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/bootstrap.css">
-
-        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/jquery-ui.css">
-
-		<script src="https://publications.ue-varna.bg/assets/js/jquery.min.js"></script>
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="Списък публикации на преподавателите от ИУ-Варна в направления Икономика, Информатика и компютърни науки, Финанси, Маркетинг, Счетоводство и контрол, Администрация и управление, Туризъм"/>                   
+        <!-- <link media="all" type="text/css" rel="stylesheet" href="assets/css/cmsv5.css"> -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="60x60" href="https://publications.ue-varna.bg/assets/img/apple-icon-60x60.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://publications.ue-varna.bg/assets/img/favicon-32x32.png">
-
-        <script>var BASE = "https://publications.ue-varna.bg";</script>
-        <script>var localeCheck = "bg";</script>
-        <script src='https://www.google.com/recaptcha/api.js'></script>
-        <title> Преподаватели </title>   
+        <title> Регистър публикации - начало </title>   
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <div id="wrapper" class="container-fluid" style="padding:0px;">
-            <div class="row remove-margin">
-                <div class="branded" style="position:relative;">
-                    <div style="width:186px;height:186px;position:absolute;top:0;right:0;padding:15px;background:white;z-index:1;">
-                            <a class="" href="#"><img src="https://publications.ue-varna.bg/assets/img/IU.png" class="img-responsive center-block" alt="Logo"> </a>
-                    </div>
-                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 remove-padding bg-light left-column">
-                    <div class="logo-section bg-white">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <div class="col-auto p-0 bg-lightgreen left-column">
+                    <div class="bg-white text-center py-4">
                         <a href="http://publications.ue-varna.bg">
-                            <img src="https://publications.ue-varna.bg/assets/img/Logo.png" class="img-responsive center-block" alt="Logo"> 
+                            <img src="https://publications.ue-varna.bg/assets/img/Logo.png" class="img-fluid" alt="Logo"> 
                         </a>
                     </div>
-                    <div class="main-nav">
-                        <ul class="nav nav-pills nav-stacked left-menu text-white" id="stacked-menu">
-                                        
-                                                                                            <li class="menu-item bg-dark">
-                                    
-                                    <a href="https://publications.ue-varna.bg/home">Начало</a>  
-                                </li>
-                                                                                                                            <li class="menu-item bg-dark">
-                                    
-                                    <a href="https://publications.ue-varna.bg/news">Новини</a>  
-                                </li>
-                                                                                                                                        
-                                    
-                                    <li class="menu-item bg-light">
-                                        <a href="#" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu">Справки <i class="glyphicon glyphicon-chevron-down pull-right" style="padding-top: 3px;padding-right:20px"></i></a>
-                                        <ul class="nav nav-pills nav-stacked collapse in" id="item2">
-                                                                                        <li class="menu-nested-item active-subitem">
-                                                <a href="https://publications.ue-varna.bg/authors">По Преподавател</a>
-                                            </li>
-                                                                                        <li class="menu-nested-item ">
-                                                <a href="https://publications.ue-varna.bg/phd-students">По Докторант</a>
-                                            </li>
-                                                                                        <li class="menu-nested-item ">
-                                                <a href="https://publications.ue-varna.bg/phd-programmes">По Дoкторска програма</a>
-                                            </li>
-                                                                                        <li class="menu-nested-item ">
-                                                <a href="https://publications.ue-varna.bg/departments">По Катедра</a>
-                                            </li>
-                                                                                        <li class="menu-nested-item ">
-                                                <a href="https://publications.ue-varna.bg/faculties">По Факултет</a>
-                                            </li>
-                                                                                        <li class="menu-nested-item ">
-                                                <a href="https://publications.ue-varna.bg/guest/publications/view">Общо Публикации</a>
-                                            </li>
-                                                                                        <li class="menu-nested-item ">
-                                                <a href="https://publications.ue-varna.bg/statistics">Статистика</a>
-                                            </li>
-                                                                                    </ul>
+                    <div class="">
+                        <ul class="nav text-white flex-md-column accordion text-center text-md-start" id="stacked-menu">
+                            <li class="nav-item col col-md-auto">
+                                <a class="list-group-item list-group-item-action bg-lightgreen text-white text-decoration-none px-2 ps-md-4 py-3 d-block border-bottom border-dark border-1" href="https://publications.ue-varna.bg/home">Начало</a>  
+                            </li>
+                            <li class="nav-item col col-md-auto">
+                                <a class="list-group-item list-group-item-action bg-darkgreen text-white text-decoration-none px-2 ps-md-4 py-3 d-block border-bottom border-dark border-1" href="https://publications.ue-varna.bg/news">Новини</a>  
+                            </li>
+                            <li class="nav-item bg-darkgreen col col-md-auto" >
+                                <button class="accordion-button collapsed bg-darkgreen border-bottom border-dark border-1 text-white" data-bs-target="#item2" data-bs-toggle="collapse" id="accordion-menu-item">Справки</button>
+                                <ul class="accordion-collapse collapse list-unstyled " id="item2" data-bs-parent="#stacked-menu">
+                                    <li class="">
+                                        <a class="bg-darkgreen text-white text-decoration-none  ps-md-4 py-3 d-block border-1"  href="https://publications.ue-varna.bg/authors" class="nav-link">По Преподавател</a>
                                     </li>
-                                                                                                                                                                <li class="menu-item bg-dark">
-                                    
-                                    <a href="https://publications.ue-varna.bg/user/login">Вход</a>  
-                                </li>
-                                                                                                                            <li class="menu-item bg-dark">
-                                    
-                                    <a href="https://publications.ue-varna.bg/user/register">Регистрация</a>  
-                                </li>
-                                                                                                                    </ul>
+                                    <li class="">
+                                        <a class="bg-darkgreen text-white text-decoration-none  ps-md-4 py-3 d-block border-1" href="https://publications.ue-varna.bg/phd-students" class="nav-link">По Докторант</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="bg-darkgreen text-white text-decoration-none  ps-md-4 py-3 d-block border-1" href="https://publications.ue-varna.bg/phd-programmes" class="nav-link">По Дoкторска програма</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="bg-darkgreen text-white text-decoration-none ps-md-4 py-3 d-block border-1" href="https://publications.ue-varna.bg/departments" class="nav-link">По Катедра</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="bg-darkgreen text-white text-decoration-none ps-md-4 py-3 d-block border-1" href="https://publications.ue-varna.bg/faculties" class="nav-link">По Факултет</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="bg-darkgreen text-white text-decoration-none ps-md-4 py-3 d-block border-1" href="https://publications.ue-varna.bg/guest/publications/view" class="nav-link">Общо Публикации</a>
+                                    </li>
+                                    <li class="">
+                                        <a class="bg-darkgreen text-white text-decoration-none ps-md-4 py-3 d-block border-1" href="https://publications.ue-varna.bg/statistics"- class="nav-link">Статистика</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item col col-md-auto">
+                                <a class="list-group-item list-group-item-action bg-darkgreen text-white text-decoration-none px-2 ps-md-4 py-3 d-block border-bottom border-dark border-1" href="https://publications.ue-varna.bg/user/login">Вход</a>  
+                            </li>
+                            <li class="menu-item col col-md-auto">
+                                <a class="list-group-item list-group-item-action bg-darkgreen text-white text-decoration-none px-2 ps-md-4 py-3 d-block border-bottom border-dark border-1" href="https://publications.ue-varna.bg/user/register">Регистрация</a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="brand-section">
+                    <div class="text-center mt-5 d-none d-md-block">
                         <a class="" href="https://www.ue-varna.bg/" title="Икономически университет - Варна"><img src="https://publications.ue-varna.bg/assets/img/IU.png" class="img-responsive center-block" alt="Logo"> </a>
                     </div>
                 </div>
-                               
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 remove-padding right-column">
-                    <div class="header bg-white ">
-
+                <div class="col p-0">
+                    <div class="bg-white m-4 p-2 border-white border-bottom border-3 d-none d-md-block">
                     </div>
-                    <div class="big-title-container text-center bg-dark text-white">
-                        <h2 class="remove-margin"> Регистър публикации акадeмичен състав </h1>
-                            <h3 class="remove-margin"> Икономически университет - Варна </h2>
+                    <div class="text-center bg-darkgreen text-white pt-4 pb-3">
+                        <h2 class="m-0"> Регистър публикации акадeмичен състав </h2>
+                        <h3 class="m-0 fw-light"> Икономически университет - Варна </h3>
                     </div>
-
-                    <div class="form-body-section bg-white">
+                                       
+<div class="form-body-section bg-white">
     <div class="wrap-me clearfix">
-        <div class="form-title"> 
-            Списък Преподаватели
-            <div class="ribbon"></div>
-        </div>
-
-                <div class="form-validate form-inline">
-                <form method="POST" action="https://publications.ue-varna.bg/search-authors" accept-charset="UTF-8" class="" enctype="multipart/form-data"><input name="_token" type="hidden" value="RW8XR7Op4qjsswHmVjTMxwQtlItjqU2VUym0wHFp">
-                <div class="form-group" style="">
-
-                    <label for="name" class="control-label" style="margin-right:10px;">Име на преподавател</label>
-                    <input class="form-control" style="width:290px;" name="name" type="text" value="" id="name">
-                    <label for="department" class="control-label" style="margin-left:30px;="style=&quot;margin-left:30px;">Катедра</label>
-                    <div class="select-style" style="margin-left:10px;width:290px;">
-                    <select class="" id="department" name="department"><option value="">избери</option><option value="2">Счетоводна отчетност</option><option value="3">Информатика</option><option value="5">Финанси</option><option value="6">Обща икономическа теория</option><option value="7">Правни науки</option><option value="8">Бизнес, инвестиции, недвижими имоти</option><option value="9">Индустриален бизнес и логистика</option><option value="10">Икономика и управление на търговията</option><option value="11">Стокознание</option><option value="12">Аграрна икономика</option><option value="13">Статистика и приложна математика</option><option value="14">Физическо възпитание и спорт</option><option value="15">Управление и администрация</option><option value="16">Маркетинг</option><option value="17">Икономика и организация на туризма</option><option value="18">Международни икономически отношения</option><option value="19">Социални и хуманитарни науки</option><option value="22">Колеж по туризъм</option><option value="23">Туризъм</option><option value="24">Чужди езици</option><option value="26">Езиково обучение и комуникация</option></select>
-                    </div>
-                </div>
-                <input class="btn btn-default submit-me pull-right" type="submit" value="Изведи">
-                </div>
-            </form>
-        <table class="table table-striped table-bordered table-stats">
-            <colgroup> 
-                <col class="col-xs-4"> 
-                <col class="col-xs-2"> 
-                <col class="col-xs-5"> 
-            </colgroup> 
-            <thead> 
-                <tr>
-                    <th>Преподавател</th> 
-                    <th class="">Линкове</th> 
-                    <th style="position:relative;">Катедра
-                                            </th> 
-                </tr> </thead> 
-            <tbody> 
-
-                                <tr> 
-                    <th scope="row"> 
-                        Аврам Моис Ескенази
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/O7Pj">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/O7Pj">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Информатика
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Албена Недкова Добрева
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/akm9">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/akm9">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Езиково обучение и комуникация
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Александрина Димитрова Панчева
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/6lP5">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/6lP5">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Финанси
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Александър Боянов Тодоров
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/6XRw">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/6XRw">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Обща икономическа теория
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Александър Асенов Шиваров
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/2YyW">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/2YyW">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Международни икономически отношения
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анастасия Стефанова Кондукторова
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/OwVw">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/OwVw">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Езиково обучение и комуникация
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анастасия Атанасова Цонева
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/2Wdo">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/2Wdo">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Езиково обучение и комуникация
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анастасия Райкова Станчева
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/6qKk">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/6qKk">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Управление и администрация
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Ангел Генчев Ангелов
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/2EKO">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/2EKO">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Статистика и приложна математика
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Андрияна  Йовчева Андреева
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/6rKb">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/6rKb">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Правни науки
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анелия Галинова Атанасова
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/6eAE">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/6eAE">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Счетоводна отчетност
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анелия Георгиева Герчева
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/OzEL">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/OzEL">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Езиково обучение и комуникация
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анета Стефанова Стефанова
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/OVbL">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/OVbL">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Езиково обучение и комуникация
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анита Атанасова Атанасова
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/ODWz">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/ODWz">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Счетоводна отчетност
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анка Стоянова Хубанова
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/68nV">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/68nV">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Информатика
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анна Хараламбиева Кънчева
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/ag3J">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/ag3J">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Информатика
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Анна  Живкова  Господинова
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/68dg">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/68dg">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Бизнес, инвестиции, недвижими имоти
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Антоанета Петрова Стоянова
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/a1BK">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/a1BK">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Стокознание
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Апостол Атанасов Апостолов
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/6X5O">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/6X5O">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Социални и хуманитарни науки
-                                            </td>
-                </tr>
-                                <tr> 
-                    <th scope="row"> 
-                        Асен Тодоров Иванов
-                    </th> 
-                    <td class="table-cell-mid">
-                        <div class="clearfix">
-                                                        <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-author/OQRe">Публикации</a>
-                            </div>
-                                                         <div class="pull-left">                             
-                                <a href="https://publications.ue-varna.bg/list-citations/OQRe">Цитати</a>
-                            </div>
-                        </div>
-                    </td> 
-                    <td >
-                                                Стокознание
-                                            </td>
-                </tr>
-                                
-                
-            </tbody>
-
-        </table>
-        <div class="clearfix">
-            <div class="pull-right">
-             <ul class="pagination">
-			<li class="disabled"><span>&laquo;</span></li><li class="active"><span>1</span></li><li><a href="https://publications.ue-varna.bg/authors?page=2">2</a></li><li><a href="https://publications.ue-varna.bg/authors?page=3">3</a></li><li><a href="https://publications.ue-varna.bg/authors?page=4">4</a></li><li><a href="https://publications.ue-varna.bg/authors?page=5">5</a></li><li><a href="https://publications.ue-varna.bg/authors?page=6">6</a></li><li><a href="https://publications.ue-varna.bg/authors?page=7">7</a></li><li><a href="https://publications.ue-varna.bg/authors?page=8">8</a></li><li class="disabled"><span>...</span></li><li><a href="https://publications.ue-varna.bg/authors?page=20">20</a></li><li><a href="https://publications.ue-varna.bg/authors?page=21">21</a></li><li><a href="https://publications.ue-varna.bg/authors?page=2" rel="next">&raquo;</a></li>	</ul>
-
-            </div>
-        </div>
+        <div class="form-title">
+            Списък Преподаватели 
+        <div class="ribbon"></div>
     </div>
-</div>
+    <div class="form-validate form-inline">
+        <form method="POST" action="https://publications.ue-varna.bg/search-authors" accept-charset="UTF-8" class="" enctype="multipart/form-data">
+            <input name="_token" type="hidden" value="RW8XR7Op4qjsswHmVjTMxwQtlItjqU2VUym0wHFp">
+            <div class="form-group" style="">
+                <label for="name" class="control-label" style="margin-right:10px;">Име на преподавател</label>
+                <input class="form-control" style="width:290px;" name="name" type="text" value="" id="name">
+                <label for="department" class="control-label" style="margin-left:30px;">Катедра</label>
+                <div class="select-style" style="margin-left:10px;width:290px;">
+                    <select class="" id="department" name="department">
+                        <option value="">избери</option>
+                        <option value="2">Счетоводна отчетност</option>
+                        <option value="3">Информатика</option>
+                        <option value="5">Финанси</option>
+                        <option value="6">Обща икономическа теория</option>
+                        <option value="7">Правни науки</option>
+                        <option value="8">Бизнес, инвестиции, недвижими имоти</option>
+                        <option value="9">Индустриален бизнес и логистика</option>
+                        <option value="10">Икономика и управление на търговията</option>
+                        <option value="11">Стокознание</option>
+                        <option value="12">Аграрна икономика</option>
+                        <option value="13">Статистика и приложна математика</option>
+                        <option value="14">Физическо възпитание и спорт</option>
+                        <option value="15">Управление и администрация</option>
+                        <option value="16">Маркетинг</option>
+                        <option value="17">Икономика и организация на туризма</option>
+                        <option value="18">Международни икономически отношения</option>
+                        <option value="19">Социални и хуманитарни науки</option>
+                        <option value="22">Колеж по туризъм</option>
+                        <option value="23">Туризъм</option>
+                        <option value="24">Чужди езици</option>
+                        <option value="26">Езиково обучение и комуникация</option>
+                    </select>
                 </div>
-                            </div>
-        </div>
+            </div>
+            <input class="btn btn-default submit-me pull-right" type="submit" value="Изведи">
+        
+        </form>
+      <table class="table table-striped table-bordered table-stats">
+         <colgroup>
+            <col class="col-xs-4">
+            <col class="col-xs-2">
+            <col class="col-xs-5">
+         </colgroup>
+         <thead>
+            <tr>
+               <th>Преподавател</th>
+               <th class="">Линкове</th>
+               <th style="position:relative;">Катедра </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th scope="row"> Аврам Моис Ескенази </th>
+               <td class="table-cell-mid">
+                  <div class="clearfix">
+                     <div class="pull-left">
+                        <a href="https://publications.ue-varna.bg/list-author/O7Pj">Публикации</a>
+                     </div>
+                     <div class="pull-left">
+                        <a href="https://publications.ue-varna.bg/list-citations/O7Pj">Цитати</a>
+                     </div>
+                  </div>
+               </td>
+               <td> Информатика </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="clearfix">
+         <div class="pull-right">
+            <ul class="pagination">
+               <li class="disabled">
+                  <span>&laquo;</span>
+               </li>
+               <li class="active">
+                  <span>1</span>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=2">2</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=3">3</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=4">4</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=5">5</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=6">6</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=7">7</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=8">8</a>
+               </li>
+               <li class="disabled">
+                  <span>...</span>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=20">20</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=21">21</a>
+               </li>
+               <li>
+                  <a href="https://publications.ue-varna.bg/authors?page=2" rel="next">&raquo;</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+
         <script src="https://publications.ue-varna.bg/assets/js/bootstrap.min.js"></script>
-
         <script src="https://publications.ue-varna.bg/assets/js/jquery-ui.min.js"></script>
-
         <script src="https://publications.ue-varna.bg/assets/js/sweetalert2.all.js"></script>
-
         <script src="https://publications.ue-varna.bg/assets/js/javascriptv5.js"></script>
-
     </body>
 </html>
