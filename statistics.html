@@ -1,0 +1,736 @@
+
+<!-- Design by  -->
+
+<!DOCTYPE html>
+<html lang="bg">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+        <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+        <meta name="description" content="Статистика за публикационната дейност на преподавателите в ИУ-Варна"/>                   
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/cmsv5.css?v=3.1">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/normalize.css">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/clickmap.css">
+     
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/bootstrap.css">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/jquery-ui.css">
+
+		<script src="https://publications.ue-varna.bg/assets/js/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <link rel="apple-touch-icon" sizes="60x60" href="https://publications.ue-varna.bg/assets/img/apple-icon-60x60.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://publications.ue-varna.bg/assets/img/favicon-32x32.png">
+
+        <script>var BASE = "https://publications.ue-varna.bg";</script>
+        <script>var localeCheck = "bg";</script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <title> Статистика </title>   
+    </head>
+    <body>
+        <div id="wrapper" class="container-fluid" style="padding:0px;">
+            <div class="row remove-margin">
+                <div class="branded" style="position:relative;">
+                    <div style="width:186px;height:186px;position:absolute;top:0;right:0;padding:15px;background:white;z-index:1;">
+                            <a class="" href="#"><img src="https://publications.ue-varna.bg/assets/img/IU.png" class="img-responsive center-block" alt="Logo"> </a>
+                    </div>
+                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 remove-padding bg-light left-column">
+                    <div class="logo-section bg-white">
+                        <a href="http://publications.ue-varna.bg">
+                            <img src="https://publications.ue-varna.bg/assets/img/Logo.png" class="img-responsive center-block" alt="Logo"> 
+                        </a>
+                    </div>
+                    <div class="main-nav">
+                        <ul class="nav nav-pills nav-stacked left-menu text-white" id="stacked-menu">
+                                        
+                                                                                            <li class="menu-item bg-dark">
+                                    
+                                    <a href="https://publications.ue-varna.bg/home">Начало</a>  
+                                </li>
+                                                                                                                            <li class="menu-item bg-dark">
+                                    
+                                    <a href="https://publications.ue-varna.bg/news">Новини</a>  
+                                </li>
+                                                                                                                                        
+                                    
+                                    <li class="menu-item bg-light">
+                                        <a href="#" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu">Справки <i class="glyphicon glyphicon-chevron-down pull-right" style="padding-top: 3px;padding-right:20px"></i></a>
+                                        <ul class="nav nav-pills nav-stacked collapse in" id="item2">
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/authors">По Преподавател</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/phd-students">По Докторант</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/phd-programmes">По Дoкторска програма</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/departments">По Катедра</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/faculties">По Факултет</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/guest/publications/view">Общо Публикации</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item active-subitem">
+                                                <a href="https://publications.ue-varna.bg/statistics">Статистика</a>
+                                            </li>
+                                                                                    </ul>
+                                    </li>
+                                                                                                                                                                <li class="menu-item bg-dark">
+                                    
+                                    <a href="https://publications.ue-varna.bg/user/login">Вход</a>  
+                                </li>
+                                                                                                                            <li class="menu-item bg-dark">
+                                    
+                                    <a href="https://publications.ue-varna.bg/user/register">Регистрация</a>  
+                                </li>
+                                                                                                                    </ul>
+                    </div>
+                    <div class="brand-section">
+                        <a class="" href="https://www.ue-varna.bg/" title="Икономически университет - Варна"><img src="https://publications.ue-varna.bg/assets/img/IU.png" class="img-responsive center-block" alt="Logo"> </a>
+                    </div>
+                </div>
+                               
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 remove-padding right-column">
+                    <div class="header bg-white ">
+
+                    </div>
+                    <div class="big-title-container text-center bg-dark text-white">
+                        <h2 class="remove-margin"> Регистър публикации акадeмичен състав </h2>
+                            <h3 class="remove-margin"> Икономически университет - Варна </h3>
+                    </div>
+
+                        <div class="form-body-section bg-white">
+        <div class="wrap-me clearfix">
+            <div class="form-title"> 
+                Статистика Публикации 
+                <div class="ribbon"></div>
+            </div>
+			
+			<script type="text/javascript">
+			$(document).ready(function(){		  
+				$( ".all_dt" ).hide() ;				
+				$( "#facultyName" ).change(function() {
+				  $("#departmentName").val("");
+				  $( ".all_dt" ).hide() ;
+				  var selected='dt'+this.value;				  
+				  $( "."+selected ).show();					
+				});
+				
+				$( "#year_start" ).change(function() {
+				  	var year_start=parseInt(this.value);
+					var year_end=parseInt($( "#year_end" ).val());					
+					if(year_start<year_end-6)  {
+						$( "#year_end" ).val(year_start+6);
+						alert('Максималният интервал е 7 години');
+					}
+				});
+				
+				$( "#year_end" ).change(function() {
+				  	var year_end =parseInt(this.value);
+					var year_start=parseInt($( "#year_start" ).val());					
+					if(year_start<year_end-6)  {
+						$( "#year_start" ).val(year_end-6);
+						alert('Максималният интервал е 7 години');	
+					}					
+				});
+				
+				
+			});
+			
+			
+			</script>
+					
+			<form method="POST" action="https://publications.ue-varna.bg/search-in-statistics" accept-charset="UTF-8" class=""><input name="_token" type="hidden" value="TGsWiUDkl6WrIjDphYE952BncnVqaDXsQZSAKLik">			
+            <div class="form-validate form-inline" style="margin-bottom:20px;">
+                <div class="form-group">
+				<a href="#" data-toggle="tooltip" title="Максималният интервал е 7 години">*</a>
+                <label for="year_start" class="control-label" style="margin-right:10px;">Година</label>
+                    
+					<div class="select-style" style="margin-right:15px;width:73px;">					
+                        <select class="" id="year_start" name="year_start"><option value="">от</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017" selected="selected">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option></select>
+                    </div>
+                    <div class="select-style" style="margin-right:15px;width:73px; ">
+                        <select class="" id="year_end" name="year_end"><option value="">до</option><option value="2023" selected="selected">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option></select>
+                    </div>
+									<div class="select-style" >
+                       <select class="" id="facultyName" style="" name="facultyName"><option value="">Всички факултети</option><option value="1">Стопански факултет</option><option value="2">Факултет Информатика
+</option><option value="3">Факултет Управление</option><option value="4">Финансово-счетоводен факултет</option><option value="5">Колеж по туризъм</option></select>
+                    </div>
+					<div class="select-style" >
+                       
+                     <select  id="departmentName" name="departmentName" style="">
+					 <option value=''>Всички катедри</option>
+																	  
+                            <option value="2" class="all_dt dt4" > Счетоводна отчетност </option>                
+                      											  
+                            <option value="3" class="all_dt dt2" > Информатика </option>                
+                      											  
+                            <option value="5" class="all_dt dt4" > Финанси </option>                
+                      											  
+                            <option value="6" class="all_dt dt4" > Обща икономическа теория </option>                
+                      											  
+                            <option value="7" class="all_dt dt4" > Правни науки </option>                
+                      											  
+                            <option value="8" class="all_dt dt1" > Бизнес, инвестиции, недвижими имоти </option>                
+                      											  
+                            <option value="9" class="all_dt dt1" > Индустриален бизнес и логистика </option>                
+                      											  
+                            <option value="10" class="all_dt dt1" > Икономика и управление на търговията и услугите </option>                
+                      											  
+                            <option value="11" class="all_dt dt1" > Стокознание </option>                
+                      											  
+                            <option value="12" class="all_dt dt1" > Аграрна икономика </option>                
+                      											  
+                            <option value="13" class="all_dt dt2" > Статистика и приложна математика </option>                
+                      											  
+                            <option value="14" class="all_dt dt0" > Физическо възпитание и спорт </option>                
+                      											  
+                            <option value="15" class="all_dt dt3" > Управление и администрация </option>                
+                      											  
+                            <option value="16" class="all_dt dt3" > Маркетинг </option>                
+                      											  
+                            <option value="17" class="all_dt dt3" > Икономика и организация на туризма </option>                
+                      											  
+                            <option value="18" class="all_dt dt3" > Международни икономически отношения </option>                
+                      											  
+                            <option value="19" class="all_dt dt3" > Социални и хуманитарни науки </option>                
+                      											  
+                            <option value="22" class="all_dt dt0" > Колеж по туризъм </option>                
+                      											  
+                            <option value="23" class="all_dt dt5" > Туризъм </option>                
+                      											  
+                            <option value="24" class="all_dt dt5" > Чужди езици и комуникация в туризма </option>                
+                      											  
+                            <option value="26" class="all_dt dt2" > Езиково обучение и спорт </option>                
+                       
+					  </select>
+					</div>
+                </div>
+				<script src="https://publications.ue-varna.bg/assets/xeppdf/xepOnline.jqPlugin.js"></script>
+
+				
+				<a class="noprint nodec btn btn-default btn-sm " id="download-pdf" href="#" onclick="return xepOnline.Formatter.Format('print_pdf',{render:'download',filename :'statistics'});"><i class="glyphicon glyphicon-download-alt"></i> Изтегли в PDF </a>
+                
+                <input class="btn btn-default submit-me pull-right" type="submit" value="Филтрирай">
+            </div>
+            </form>
+			            <div class="accordion clearfix" id="accordion2" style="height:auto!important">
+                <div class="accordion-group panel-body" id="stored-programme">
+                    <div class="accordion-heading" style="position:relative;">
+                        <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#collapse-programme5">
+                            Публикационна дейност на академичния състав общо в ИУ-Варна за периода 2017 г. - 2023 г.
+                        </a>
+                    </div>
+					                    <div id="collapse-programme5" class="accordion-body collapse in">
+                        <div class="accordion-inner "> 
+                            <div class="panel">
+                                <div class="panel-body" id="print_pdf">
+								<header style="display:none; padding-top:20px;">									
+									<table width="100%" >										
+										<tr>											
+											<td align="left"><img src="https://publications.ue-varna.bg/assets/img/IU.png" style="width:60px"></td>																					
+											<td style="font-size:95%;text-align:center;" align="center" >Публикационна дейност на академичния състав общо в ИУ-Варна за периода 2017 г. - 2023 г.</td>									
+											<td align="right"><img src="https://publications.ue-varna.bg/assets/img/Logo.png" style="width:60px"></td>									
+										</tr>
+									</table>									
+								</header>
+								<footer style="display:none">
+								<p class="foot">Справката е отпечатана чрез Регистър публикации акадeмичен състав publications.ue-varna.bg </p>
+									<p class="foot">Страница <pagenum></pagenum>&nbsp;от&nbsp;<totpages></totpages></p>
+								</footer>
+								<div style="margin-top:10px;">
+                                    <table class="table table-striped table-bordered table-stats">                                       
+                                        <thead> 
+                                            <tr>
+                                                <th>
+													<table>
+														<tr><td>Година</td></tr>
+														<tr><td>Вид публикация</td></tr>
+													</table>
+												</th> 
+                                                                                                  <th style="vertical-align: top">2017</th>
+                                                                                                  <th style="vertical-align: top">2018</th>
+                                                                                                  <th style="vertical-align: top">2019</th>
+                                                                                                  <th style="vertical-align: top">2020</th>
+                                                                                                  <th style="vertical-align: top">2021</th>
+                                                                                                  <th style="vertical-align: top">2022</th>
+                                                                                                  <th style="vertical-align: top">2023</th>
+                                                                                                 
+                                                <th style="vertical-align: top">Общо</th> 
+                                            </tr>
+                                        </thead> 
+                                        <tbody>                                        
+                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Монографии <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>14 </td> 
+                                                                                                  <td>20 </td> 
+                                                                                                  <td>24 </td> 
+                                                                                                  <td>32 </td> 
+                                                                                                  <td>38 </td> 
+                                                                                                  <td>26 </td> 
+                                                                                                  <td>17 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									171
+												</td>
+												
+												</tr>
+												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Монографии в Scopus  </td>
+                                                 
+												                                                    <td>1 </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>1 </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td>3 </td> 
+                                                 
+                                                  
+                                                <td>7 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Монографии в други индексирани издания  </td>
+                                                 
+												                                                    <td>4 </td> 
+                                                                                                  <td>7 </td> 
+                                                                                                  <td>14 </td> 
+                                                                                                  <td>14 </td> 
+                                                                                                  <td>25 </td> 
+                                                                                                  <td>15 </td> 
+                                                                                                  <td>8 </td> 
+                                                 
+                                                  
+                                                <td>87 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Студии <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>18 </td> 
+                                                                                                  <td>16 </td> 
+                                                                                                  <td>33 </td> 
+                                                                                                  <td>31 </td> 
+                                                                                                  <td>30 </td> 
+                                                                                                  <td>26 </td> 
+                                                                                                  <td>16 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									170
+												</td>
+												
+												</tr>
+												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Студии в Scopus  </td>
+                                                 
+												                                                    <td>3 </td> 
+                                                                                                  <td>3 </td> 
+                                                                                                  <td>7 </td> 
+                                                                                                  <td>6 </td> 
+                                                                                                  <td>4 </td> 
+                                                                                                  <td>7 </td> 
+                                                                                                  <td>6 </td> 
+                                                 
+                                                  
+                                                <td>36 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Студии в Web of Science Q2  </td>
+                                                 
+												                                                    <td> </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td> </td> 
+                                                 
+                                                  
+                                                <td>2 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Студии в Web of Science Q4 или Scopus  </td>
+                                                 
+												                                                    <td>5 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>6 </td> 
+                                                                                                  <td>1 </td> 
+                                                                                                  <td>6 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>1 </td> 
+                                                 
+                                                  
+                                                <td>23 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Студии в други индексирани издания  </td>
+                                                 
+												                                                    <td>8 </td> 
+                                                                                                  <td>11 </td> 
+                                                                                                  <td>22 </td> 
+                                                                                                  <td>24 </td> 
+                                                                                                  <td>19 </td> 
+                                                                                                  <td>19 </td> 
+                                                                                                  <td>9 </td> 
+                                                 
+                                                  
+                                                <td>112 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Статии <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>252 </td> 
+                                                                                                  <td>216 </td> 
+                                                                                                  <td>206 </td> 
+                                                                                                  <td>165 </td> 
+                                                                                                  <td>192 </td> 
+                                                                                                  <td>184 </td> 
+                                                                                                  <td>61 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									1276
+												</td>
+												
+												</tr>
+												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Статии в Scopus  </td>
+                                                 
+												                                                    <td>7 </td> 
+                                                                                                  <td>12 </td> 
+                                                                                                  <td>13 </td> 
+                                                                                                  <td>17 </td> 
+                                                                                                  <td>19 </td> 
+                                                                                                  <td>18 </td> 
+                                                                                                  <td>11 </td> 
+                                                 
+                                                  
+                                                <td>97 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Статии в Web of Science Q1  </td>
+                                                 
+												                                                    <td>2 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td>1 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td>1 </td> 
+                                                 
+                                                  
+                                                <td>8 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Статии в Web of Science Q2  </td>
+                                                 
+												                                                    <td>1 </td> 
+                                                                                                  <td>3 </td> 
+                                                                                                  <td>1 </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td>3 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>2 </td> 
+                                                 
+                                                  
+                                                <td>12 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Статии в Web of Science Q3  </td>
+                                                 
+												                                                    <td> </td> 
+                                                                                                  <td> </td> 
+                                                                                                  <td>3 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>1 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>1 </td> 
+                                                 
+                                                  
+                                                <td>9 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Статии в Web of Science Q4 или Scopus  </td>
+                                                 
+												                                                    <td>17 </td> 
+                                                                                                  <td>19 </td> 
+                                                                                                  <td>23 </td> 
+                                                                                                  <td>14 </td> 
+                                                                                                  <td>11 </td> 
+                                                                                                  <td>8 </td> 
+                                                                                                  <td>6 </td> 
+                                                 
+                                                  
+                                                <td>98 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Статии в други индексирани издания  </td>
+                                                 
+												                                                    <td>216 </td> 
+                                                                                                  <td>186 </td> 
+                                                                                                  <td>163 </td> 
+                                                                                                  <td>135 </td> 
+                                                                                                  <td>156 </td> 
+                                                                                                  <td>158 </td> 
+                                                                                                  <td>44 </td> 
+                                                 
+                                                  
+                                                <td>1058 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Доклади <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>295 </td> 
+                                                                                                  <td>280 </td> 
+                                                                                                  <td>221 </td> 
+                                                                                                  <td>228 </td> 
+                                                                                                  <td>212 </td> 
+                                                                                                  <td>159 </td> 
+                                                                                                  <td>108 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									1503
+												</td>
+												
+												</tr>
+												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Доклади в Scopus  </td>
+                                                 
+												                                                    <td>1 </td> 
+                                                                                                  <td>9 </td> 
+                                                                                                  <td>16 </td> 
+                                                                                                  <td>19 </td> 
+                                                                                                  <td>11 </td> 
+                                                                                                  <td>14 </td> 
+                                                                                                  <td>9 </td> 
+                                                 
+                                                  
+                                                <td>79 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Доклади в Web of Science Q4 или Scopus  </td>
+                                                 
+												                                                    <td>1 </td> 
+                                                                                                  <td>18 </td> 
+                                                                                                  <td>20 </td> 
+                                                                                                  <td>5 </td> 
+                                                                                                  <td>5 </td> 
+                                                                                                  <td>1 </td> 
+                                                                                                  <td> </td> 
+                                                 
+                                                  
+                                                <td>50 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                            												 	
+                                                <tr  >
+                                                <td style="text-align: right;" >Доклади в други индексирани издания  </td>
+                                                 
+												                                                    <td>205 </td> 
+                                                                                                  <td>185 </td> 
+                                                                                                  <td>160 </td> 
+                                                                                                  <td>180 </td> 
+                                                                                                  <td>170 </td> 
+                                                                                                  <td>128 </td> 
+                                                                                                  <td>90 </td> 
+                                                 
+                                                  
+                                                <td>1118 </td> 
+                                                </tr>
+                                            											                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Учебници <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>17 </td> 
+                                                                                                  <td>17 </td> 
+                                                                                                  <td>15 </td> 
+                                                                                                  <td>18 </td> 
+                                                                                                  <td>11 </td> 
+                                                                                                  <td>10 </td> 
+                                                                                                  <td>3 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									91
+												</td>
+												
+												</tr>
+												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Учебни помагала <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>8 </td> 
+                                                                                                  <td>6 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>10 </td> 
+                                                                                                  <td>11 </td> 
+                                                                                                  <td>9 </td> 
+                                                                                                  <td>7 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									53
+												</td>
+												
+												</tr>
+												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Други <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>11 </td> 
+                                                                                                  <td>6 </td> 
+                                                                                                  <td>4 </td> 
+                                                                                                  <td>4 </td> 
+                                                                                                  <td>10 </td> 
+                                                                                                  <td>2 </td> 
+                                                                                                  <td>3 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									40
+												</td>
+												
+												</tr>
+												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                            												 											                                            											  
+											  
+                                                                                           <tr  style="font-weight:bolder;" >
+                                                <td>Всички <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a> </td>
+												                                                   <td>615 </td> 
+                                                                                                  <td>561 </td> 
+                                                                                                  <td>505 </td> 
+                                                                                                  <td>488 </td> 
+                                                                                                  <td>504 </td> 
+                                                                                                  <td>416 </td> 
+                                                                                                  <td>215 </td> 
+                                                                                                 
+                                                 
+                                                	
+												<td>													
+																									3304
+												</td>
+												
+												</tr>
+												 											                                                                                        
+                
+                                        </tbody>
+                                    </table>
+								</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					                    
+                                            
+                
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                </div>
+                            </div>
+        </div>
+        <script src="https://publications.ue-varna.bg/assets/js/bootstrap.min.js"></script>
+
+        <script src="https://publications.ue-varna.bg/assets/js/jquery-ui.min.js"></script>
+
+        <script src="https://publications.ue-varna.bg/assets/js/sweetalert2.all.js"></script>
+
+        <script src="https://publications.ue-varna.bg/assets/js/javascriptv5.js?v=1.1"></script>
+
+    </body>
+</html>
