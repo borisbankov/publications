@@ -1,3 +1,6 @@
+body{
+  height:100vh;
+}
 .left-column{
 	width:100%;
   box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
