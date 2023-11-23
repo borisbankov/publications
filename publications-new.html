@@ -1,0 +1,394 @@
+
+<!-- Design by  -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/cmsv5.css?v=3.1">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/normalize.css">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/clickmap.css">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/bootstrap.css">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/jquery-ui.css">
+
+        <link media="all" type="text/css" rel="stylesheet" href="https://publications.ue-varna.bg/assets/css/bootstrap-tagsinput.css">
+
+        <script src="https://publications.ue-varna.bg/assets/js/jquery.min.js"></script>
+
+        <link rel="apple-touch-icon" sizes="60x60" href="https://publications.ue-varna.bg/assets/img/apple-icon-60x60.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://publications.ue-varna.bg/assets/img/favicon-32x32.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+        <script>var BASE = "https://publications.ue-varna.bg";</script>
+        <script>var localeCheck = "bg";</script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <title> Нова публикация </title>
+    </head>
+    <body>
+        <div id="wrapper" class="container-fluid" style="padding:0px;">
+            <div class="row remove-margin">
+                <div class="branded" style="position:relative;">
+                    <div style="width:186px;height:186px;position:absolute;top:0;right:0;padding:15px;background:white;z-index:1;">
+                            <a class="" href="#"><img src="https://publications.ue-varna.bg/assets/img/IU.png" class="img-responsive center-block" alt="Logo"> </a>
+                    </div>
+                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 remove-padding bg-light left-column">
+                    <div class="logo-section bg-white">
+                        <a href="http://publications.ue-varna.bg">
+                            <img src="https://publications.ue-varna.bg/assets/img/Logo.png" class="img-responsive center-block" alt="Logo">
+                        </a>
+
+                    </div>
+                    <div class="main-nav">
+                        <ul class="nav nav-pills nav-stacked left-menu text-white" id="stacked-menu">
+                                                                                            <li class="menu-item bg-dark">
+
+                                    <a href="https://publications.ue-varna.bg/user/home">Начало</a>
+                                </li>
+                                                                                                                            <li class="menu-item bg-dark">
+
+                                    <a href="https://publications.ue-varna.bg/user/news">Новини</a>
+                                </li>
+                                                                                            
+                                                                        <li class="menu-item  bg-dark">
+                                        <a href="#" data-target="#item2" data-toggle="collapse" data-parent="#stacked-menu">Справки <i class="glyphicon glyphicon-chevron-down pull-right" style="padding-top: 3px;padding-right:20px"></i></a>
+                                        <ul class="nav nav-pills nav-stacked collapse" id="item2">
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/user/authors">По Преподавател</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/user/phd-students">По Докторант</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/user/phd-programmes">По Докторска програма</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/user/departments">По Катедра</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/user/faculties">По Факултет</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/user/publications/view">Общо Публикации</a>
+                                            </li>
+                                                                                        <li class="menu-nested-item ">
+                                                <a href="https://publications.ue-varna.bg/user/statistics">Статистика</a>
+                                            </li>
+                                                                                    </ul>
+                                    </li>
+                                                                                                                                                                <li class="menu-item bg-dark">
+
+                                    <a href="https://publications.ue-varna.bg/user/profile/home">Лични данни</a>
+                                </li>
+                                                                                                                            <li class="menu-item bg-light">
+
+                                    <a href="https://publications.ue-varna.bg/user/my/publications">Публикационна дейност</a>
+                                </li>
+                                                            
+                            <li class="menu-item bg-dark" style="background:#23698b">
+                                <a href="https://reports.ue-varna.bg/user/help">Към Регистър отчети</a>
+                            </li>
+
+                            <li class="menu-item bg-dark">
+                                <a href="https://publications.ue-varna.bg/user/logout">Изход</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="brand-section">
+                        <a class="" href="https://www.ue-varna.bg/" title="Икономически университет - Варна"><img src="https://publications.ue-varna.bg/assets/img/IU.png" class="img-responsive center-block" alt="Logo"> </a>
+                    </div>
+                </div>
+                
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 remove-padding right-column">
+                    <div class="header bg-white ">
+
+                    </div>
+                    <div class="big-title-container text-center bg-dark text-white">
+                        <h2 class="remove-margin"> Регистър публикации академичен състав </h2>
+                            <h3 class="remove-margin"> Икономически университет - Варна </h3>
+                    </div>
+                     
+<style >
+.form-select{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    /*-moz-padding-start: calc(0.75rem - 3px);*/
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url('https://publications.ue-varna.bg/assets/img/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    /*-moz-appearance: none;*/
+    appearance: none;
+}
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+
+  }
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 90%; }
+  #sortable li { margin: 3px 3px 3px 3px; padding: 0.4em; padding-left: 1em; font-size: 1.4em; height: 1.2em;cursor:grab; }
+  .delete_author {float:right;color:#e00;cursor: grabbing; font-family:Impact;  font-style: normal;font-weight: 400;}
+  #success {display:none;width:100%;}
+
+</style>
+<div class="form-body-section bg-white">
+    <div class="wrap-me clearfix">
+        <div class="form-title"> 
+            Добавяне на публикация
+            <div class="ribbon"></div>
+        </div>
+
+                        <div class="alert alert-info alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+		<h5>Процесът на добавяне на публикация
+включва: <br/>
+1) Описание на публикацията чрез формуляра по-долу <br/>
+2) Възможност за внасяне на корекции в описанието на публикацията в рамките на 1 седмица <br/>
+3) Университетска библиотека извършва верификация на добавената публикация и я заключва за по-нататъшна редакция. 
+    
+След този срок редакции се извършват само от
+администраторите на системата.
+</h5>
+        <h5>Когато едно списание се издава
+огледално на български и английски
+език, то публикуваните в него статии
+се описват като една статия със своето заглавие
+едновременно на български и английски
+език. <br/>
+Например: <br/>
+ХXXXX, X., Научно-изследователската дейност в Икономически университет - Варна = Research Activity at University of Economics - Varna, Изв. Сп. Икон. унив. - Варна, 2015, № 2, с. 28 - 41.</h5>
+		
+        <h5>Полетата с * са задължителни</h5>
+    </div>
+        <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button><h5> Отговорноста за подадената информация е изцяло на авторите.<br/>
+        </h5>
+        </div>
+        
+        <form method="POST" action="https://publications.ue-varna.bg/user-publications-create" accept-charset="UTF-8" class="" enctype="multipart/form-data"><input name="_token" type="hidden" value="Xkc4Fc85DVfsiA7XiTLQCwFNwwWGAAAzJAr06tR6">
+        <input id="flagLanguage" name="name_language" type="hidden" value="">
+        
+    <div class="row" style="margin-right:-16px;margin-left:-16px;">
+        <div class="panel panel-default">
+            <div class="panel-heading"> <h4>Информация за публикацията </h4></div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="title" class="control-label">Заглавие на публикацията*</label>
+                    <input class="form-control " placeholder="Текст" required="required" name="title" type="text" value="" id="title">
+                    
+                </div>
+				<div class="text-center">
+					<input type="button" value="Провери за дублиране на публикацията" id="britney" class="btn btn-info" style="margin:15px 0px;"> 
+					<p class="helper-text"><span class="text-muted" style="font-size:12px"> (след като натиснете бутона за проверка ще се заредят допълнителни елементи от формуляра) </span></p>
+                </div>
+				<div class="modal" style="margin-top:15px;">
+                    
+                </div>
+                <div class="alert alert-classic alert-dismissible " style="display:none;">
+
+                </div>
+                <div class="hidden-treasure-types" style="display:none">
+                    <div class="form-group" style="margin-right:12px">
+                        <label for="title" class="control-label">Вид на публикацията*</label>
+                        <div class="btn-group" style="width:100%">
+                         <select required="required" id="pls-select" style="display:none;" name="hidden-select"><option value="" selected="selected"></option><option value="1">1</option></select> 
+    					     								
+
+    						    						    							<a style="width:15%" class="change-type btn btn-types" data-id="1" value="1">Монография</a>
+    								
+
+    						    						    							<a style="width:13%" class="change-type btn btn-types" data-id="2" value="2">Студия</a>
+    								
+
+    						    						    							<a style="width:13%" class="change-type btn btn-types" data-id="3" value="3">Статия</a>
+    								
+
+    						    						    							<a style="width:13%" class="change-type btn btn-types" data-id="4" value="4">Доклад</a>
+    								
+
+    						    						    							<a style="width:13%" class="change-type btn btn-types" data-id="5" value="5">Учебник</a>
+    								
+
+    						    						    							<a style="width:20%" class="change-type btn btn-types" data-id="6" value="6">Учебно помагало</a>
+    								
+
+    						    						    							<a style="width:13%" class="change-type btn btn-types" data-id="7" value="7">Други</a>
+    								
+
+    						    					</div>
+                    </div>				
+                    <div id="ajax-load-types">
+                        
+                    </div>
+                    <div id="visibility" style="display:none">
+                        <div class="form-group">
+                            <label for="doi" class="control-label">DOI</label>
+                            <div class="input-group">
+                            <div class="input-group-addon">https://doi.org/</div><input class="form-control " placeholder="Довършете адреса, напр. 10.24876/..." name="doi" type="text" value="" id="doi">
+                            
+                            
+                            </div>
+                            <span class="small">Довършете адреса, напр. 10.24876/...</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="scopus" class="control-label">Уеб адрес на публикацията в Scopus</label>
+                            <input class="form-control " placeholder="Въведете хиперлинк, напр. https://www.scopus.com/record/..." name="scopus" type="text" value="" id="scopus">
+                            
+                            <span class="small">Въведете хиперлинк, напр. https://www.scopus.com/record/...</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="webofscience" class="control-label">Уеб адрес на публикацията в Web of Science</label>
+                            <input class="form-control " placeholder="Въведете хиперлинк, напр. https://www.webofscience.com/wos/..." name="webofscience" type="text" value="" id="webofscience">
+                            
+                            <span class="small">Въведете хиперлинк, напр. https://www.webofscience.com/wos/...</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="standart_url" class="control-label">Друг уеб адрес (в случай, че няма DOI/Scopus/Web of Science), напр. линк към сборник от конференция или списание</label>
+                            <input class="form-control " placeholder="Въведете хиперлинк, напр. https://journal.ue-varna.bg/..." name="standart_url" type="text" value="" id="standart_url">
+                            
+                            <span class="small">Въведете хиперлинк, напр. https://journal.ue-varna.bg/...</span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="issn_print" class="control-label">ISSN (печатно)</label>
+                                    <div class="input-group">
+                                    <div class="input-group-addon">ISSN (печатно)</div><input class="form-control " placeholder="Въведете ISSN" name="issn_print" type="text" value="" id="issn_print">
+                                    
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="issn_online" class="control-label">ISSN (онлайн)</label>
+                                    <div class="input-group">
+                                    <div class="input-group-addon">ISSN (онлайн)</div><input class="form-control " placeholder="Въведете ISSN" name="issn_online" type="text" value="" id="issn_online">
+                                    
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="isbn_print" class="control-label">ISBN (печатно)</label>
+                                    <div class="input-group">
+                                    <div class="input-group-addon">ISBN (печатно)</div><input class="form-control " placeholder="Въведете ISBN" name="isbn_print" type="text" value="" id="isbn_print">
+                                    
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label for="isbn_online" class="control-label">ISBN (онлайн)</label>
+                                    <div class="input-group">
+                                    <div class="input-group-addon">ISBN (онлайн)</div><input class="form-control " placeholder="Въведете ISBN" name="isbn_online" type="text" value="" id="isbn_online">
+                                    
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+                
+            </div>
+        </div>
+        <div class="hidden-treasure" style="display:none">
+            <div class="row" style="margin-right:-16px;margin-left:-16px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading"> <h4>Авторски екип </h4></div>
+                    <div class="panel-body">
+                        <div class="form-group clearfix" style="margin-bottom:20px;border:solid 1px lightgray;border-radius:5px;padding:0px 5px;">
+                            <div class="pull-left " style="margin-right:48px;">
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="optionsAuthors" id="check_user_author" value="option1" required>
+                                    Аз съм едноличен автор на тази публикация
+                                  </label>
+                                </div>
+                            </div>
+                            <div class="pull-left ">
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="optionsAuthors" id="check_co_authors" value="option2" required>
+                                    Тази публикация е в съавторство
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                          
+                                        <div class="form-group clearfix">
+                        <div id="choose-author-position" class="pull-left" style="display:none;">
+                        <label>Кой по ред автор сте Вие?</label>
+                            <div id="" class="select-style" style="width:360px;margin-right:48px; ">
+                                <select class="form-control" id="select-author-position" name="position_author"><option value="0">избери</option><option value="1">аз съм ПЪРВИ автор</option><option value="2">аз съм ВТОРИ автор</option><option value="3">аз съм ТРЕТИ автор</option><option value="4">аз съм ЧЕТВЪРТИ автор</option><option value="5">аз съм ПЕТИ автор</option><option value="6">аз съм ШЕСТИ автор</option><option value="7">аз съм СЕДМИ автор</option><option value="8">аз съм ОСМИ автор</option><option value="9">аз съм ДЕВЕТИ автор</option><option value="10">аз съм ДЕСЕТИ автор</option><option value="11">аз съм 11-ти автор</option><option value="12">аз съм 12-ти автор</option><option value="13">аз съм 13-ти автор</option><option value="14">аз съм 14-ти автор</option><option value="15">аз съм 15-ти автор</option><option value="16">аз съм 16-ти автор</option><option value="17">аз съм 17-ти автор</option><option value="18">аз съм 18-ти автор</option><option value="19">аз съм 19-ти автор</option><option value="20">аз съм 20-ти автор</option><option value="21">аз съм 21-ви автор</option><option value="22">аз съм 22-ри автор</option><option value="23">аз съм 23-ти автор</option><option value="24">аз съм 24-ти автор</option><option value="25">аз съм 25-ти автор</option><option value="26">аз съм 26-ти автор</option><option value="27">аз съм 27-ми автор</option><option value="28">аз съм 28-ми автор</option><option value="29">аз съм 29-ти автор</option><option value="30">аз съм 30-ти автор</option></select>
+                            </div>
+                        </div>
+                                                 <div id="choose-author-count" class="pull-left" style="display:none; ">
+                            <label>Колко са авторите в екипа?</label>
+                            <div  class="select-style" style="width:273px;">
+                                <select class="form-control" id="select-author-count" name="number_authors"><option value="0">избери</option><option value="2">двама автори</option><option value="3">трима автори</option><option value="4">четирима автори</option><option value="5">петима автори</option><option value="6">шестима автори</option><option value="7">седмина автори</option><option value="8">осмина автори</option><option value="9">деветима автори</option><option value="10">десетима автори</option><option value="11">11 автори</option><option value="12">12 автори</option><option value="13">13 автори</option><option value="14">14 автори</option><option value="15">15 автори</option><option value="16">16 автори</option><option value="17">17 автори</option><option value="18">18 автори</option><option value="19">19 автори</option><option value="20">20 автори</option><option value="21">21 автори</option><option value="22">22 автори</option><option value="23">23 автори</option><option value="24">24 автори</option><option value="25">25 автори</option><option value="26">26 автори</option><option value="27">27 автори</option><option value="28">28 автори</option><option value="29">29 автори</option><option value="30">30 автори</option></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="" id="add-authors" style="display:none;">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+   <div class="hidden-treasure" style="display:none">
+        <div class="clearfix">
+                <div class="button-group-col-left pull-left">
+                    <input class="verify-the-plebs pull-right btn btn-default submit-me " id="submit-new" type="submit" value="Потвърди">
+                </div>
+                <div class="button-group-col-right pull-left">
+                    <input class="btn btn-default btn-cancel submit-me " type="reset" value="Изчисти">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                            </div>
+        </div>
+        <script src="https://publications.ue-varna.bg/assets/js/bootstrap.min.js"></script>
+
+        <script src="https://publications.ue-varna.bg/assets/js/bootstrap-tagsinput.js"></script>
+
+        <script src="https://publications.ue-varna.bg/assets/js/jquery-ui.min.js"></script>
+
+        <script src="https://publications.ue-varna.bg/assets/js/sweetalert2.all.js"></script>
+
+        <script src="https://publications.ue-varna.bg/assets/js/javascriptv5.js?v=1.1"></script>
+
+        
+    </body>
+</html>
