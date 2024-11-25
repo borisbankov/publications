@@ -8,7 +8,7 @@
     <!-- <link media="all" type="text/css" rel="stylesheet" href="assets/css/cmsv5.css"> -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="60x60" href="https://publications.ue-varna.bg/assets/img/apple-icon-60x60.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://publications.ue-varna.bg/assets/img/favicon-32x32.png">
@@ -86,13 +86,13 @@
             <div class="container mt-5">
               <form method="POST" action="https://publications.ue-varna.bg/search-in-statistics" accept-charset="UTF-8" class="">
                 <input name="_token" type="hidden" value="TGsWiUDkl6WrIjDphYE952BncnVqaDXsQZSAKLik">
-                <div class="mb-4 row align-items-center justify-content-center justify-content-xxl-evenly text-center g-1">
+                <div class="mb-4 row align-items-center justify-content-center  text-center g-1">
                     <div class=" col-xxl-auto px-0 ">
                       <a href="#" data-bs-toggle="tooltip" data-bs-title="Максималният интервал е 7 години" title="Максималният интервал е 7 години">*</a>
-                      <label for="year_start" class="me-2">Година</label>
+                      <label for="year_start" class="me-2 ">Година</label>
                     </div>
                     <div class="col-6 col-xxl-auto">
-                      <select class="form-select" id="year_start" name="year_start">
+                      <select class="form-select fs-7" id="year_start" name="year_start">
                           <option value="">от</option>
                           <option value="2023">2023</option>
                           <option value="2022">2022</option>
@@ -141,7 +141,7 @@
                       </select>
                     </div>
                     <div class="col-6 col-xxl-auto">
-                      <select class="form-select" id="year_end" name="year_end">
+                      <select class="form-select fs-7" id="year_end" name="year_end">
                           <option value="">до</option>
                           <option value="2023" selected="selected">2023</option>
                           <option value="2022">2022</option>
@@ -191,7 +191,7 @@
                     </div>
                     <div class="w-100 d-xxl-none"></div>
                     <div class="col-xxl-auto col-12">
-                      <select class="form-select" id="facultyName" style="" name="facultyName">
+                      <select class="form-select fs-7" id="facultyName" style="" name="facultyName">
                         <option value="">Всички факултети</option>
                         <option value="1">Стопански факултет</option>
                         <option value="2">Факултет Информатика </option>
@@ -201,7 +201,7 @@
                       </select>
                     </div>
                     <div class="col-xxl-auto col-12">
-                      <select id="departmentName" name="departmentName" class="form-select">
+                      <select id="departmentName" name="departmentName" class="form-select fs-7">
                         <option value=''>Всички катедри</option>
                         <option value="2" class="all_dt dt4"> Счетоводна отчетност </option>
                         <option value="3" class="all_dt dt2"> Информатика </option>
@@ -227,41 +227,41 @@
                       </select>
                     </div>
                     <div class="col-xxl-auto col-12">
-                      <script src="https://publications.ue-varna.bg/assets/xeppdf/xepOnline.jqPlugin.js"></script>
-                      <a class="noprint nodec btn btn-outline-dark" id="download-pdf" href="#" onclick="return xepOnline.Formatter.Format('print_pdf',{render:'download',filename :'statistics'});">
+                      <a class="noprint nodec btn btn-outline-dark fs-7" id="download-pdf" href="#" onclick="window.print();">
                         <i class="glyphicon glyphicon-download-alt"></i> Изтегли в PDF </a>
-                      <input class="btn btn-outline-darkgreen " type="submit" value="Филтрирай">
+                      <input class="btn btn-outline-darkgreen fs-7" type="submit" value="Филтрирай">
                     </div>
                   </div>
               </form>
-              <div class="accordion clearfix" id="accordion2" style="height:auto!important">
-                <div class="accordion-group panel-body" id="stored-programme">
-                  <div class="accordion-heading" style="position:relative;">
-                    <a class="accordion-toggle list-group-item" data-toggle="collapse" data-parent="#accordion2" href="#collapse-programme5"> Публикационна дейност на академичния състав общо в ИУ-Варна за периода 2017 г. - 2023 г. </a>
+              
+              <div class="accordion" id="accordion1">
+                <div class="accordion-item border border-secondary border-2" id="stored-programme">
+                  <div class="accordion-header">
+                    <a class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapse-programme" href="#collapse-programme"> Публикационна дейност на академичния състав общо в ИУ-Варна за периода 2017 г. - 2023 г. </a>
                   </div>
-                  <div id="collapse-programme5" class="accordion-body collapse in">
-                    <div class="accordion-inner ">
-                      <div class="panel">
-                        <div class="panel-body" id="print_pdf">
-                          <header style="display:none; padding-top:20px;">
-                            <table width="100%">
+                  <div id="collapse-programme" class="accordion-collapse collapse show" data-bs-parent="#accordion1" >
+                    <div class="accordion-body">
+                      <div class="card">
+                        <div class="card-body" id="print_pdf">
+                          <header class="d-none">
+                            <table class="w-100">
                               <tr>
                                 <td align="left">
                                   <img src="https://publications.ue-varna.bg/assets/img/IU.png" style="width:60px">
                                 </td>
-                                <td style="font-size:95%;text-align:center;" align="center">Публикационна дейност на академичния състав общо в ИУ-Варна за периода 2017 г. - 2023 г.</td>
+                                <td class="text-center" align="center">Публикационна дейност на академичния състав общо в ИУ-Варна за периода 2017 г. - 2023 г.</td>
                                 <td align="right">
                                   <img src="https://publications.ue-varna.bg/assets/img/Logo.png" style="width:60px">
                                 </td>
                               </tr>
                             </table>
                           </header>
-                          <footer style="display:none">
-                            <p class="foot">Справката е отпечатана чрез Регистър публикации акадeмичен състав publications.ue-varna.bg </p>
-                            <p class="foot">Страница <pagenum></pagenum>&nbsp;от&nbsp; <totpages></totpages>
+                          <footer class="d-none">
+                            <p class="">Справката е отпечатана чрез Регистър публикации акадeмичен състав publications.ue-varna.bg </p>
+                            <p class="">Страница <pagenum></pagenum>&nbsp;от&nbsp; <totpages></totpages>
                             </p>
                           </footer>
-                          <div style="margin-top:10px;">
+                          <div class="mt-3">
                             <table class="table table-striped table-bordered table-stats">
                               <thead>
                                 <tr>
@@ -275,18 +275,18 @@
                                       </tr>
                                     </table>
                                   </th>
-                                  <th style="vertical-align: top">2017</th>
-                                  <th style="vertical-align: top">2018</th>
-                                  <th style="vertical-align: top">2019</th>
-                                  <th style="vertical-align: top">2020</th>
-                                  <th style="vertical-align: top">2021</th>
-                                  <th style="vertical-align: top">2022</th>
-                                  <th style="vertical-align: top">2023</th>
-                                  <th style="vertical-align: top">Общо</th>
+                                  <th class="align-top">2017</th>
+                                  <th class="align-top">2018</th>
+                                  <th class="align-top">2019</th>
+                                  <th class="align-top">2020</th>
+                                  <th class="align-top">2021</th>
+                                  <th class="align-top">2022</th>
+                                  <th class="align-top">2023</th>
+                                  <th class="align-top">Общо</th>
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Монографии <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>14 </td>
@@ -299,7 +299,7 @@
                                   <td> 171 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Монографии в Scopus </td>
+                                  <td class="text-end">Монографии в Scopus </td>
                                   <td>1 </td>
                                   <td></td>
                                   <td></td>
@@ -310,7 +310,7 @@
                                   <td>7 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Монографии в други индексирани издания </td>
+                                  <td class="text-end">Монографии в други индексирани издания </td>
                                   <td>4 </td>
                                   <td>7 </td>
                                   <td>14 </td>
@@ -320,7 +320,7 @@
                                   <td>8 </td>
                                   <td>87 </td>
                                 </tr>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Студии <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>18 </td>
@@ -333,7 +333,7 @@
                                   <td> 170 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Студии в Scopus </td>
+                                  <td class="text-end">Студии в Scopus </td>
                                   <td>3 </td>
                                   <td>3 </td>
                                   <td>7 </td>
@@ -344,7 +344,7 @@
                                   <td>36 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Студии в Web of Science Q2 </td>
+                                  <td class="text-end">Студии в Web of Science Q2 </td>
                                   <td></td>
                                   <td></td>
                                   <td></td>
@@ -355,7 +355,7 @@
                                   <td>2 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Студии в Web of Science Q4 или Scopus </td>
+                                  <td class="text-end">Студии в Web of Science Q4 или Scopus </td>
                                   <td>5 </td>
                                   <td>2 </td>
                                   <td>6 </td>
@@ -366,7 +366,7 @@
                                   <td>23 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Студии в други индексирани издания </td>
+                                  <td class="text-end">Студии в други индексирани издания </td>
                                   <td>8 </td>
                                   <td>11 </td>
                                   <td>22 </td>
@@ -376,7 +376,7 @@
                                   <td>9 </td>
                                   <td>112 </td>
                                 </tr>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Статии <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>252 </td>
@@ -389,7 +389,7 @@
                                   <td> 1276 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Статии в Scopus </td>
+                                  <td class="text-end">Статии в Scopus </td>
                                   <td>7 </td>
                                   <td>12 </td>
                                   <td>13 </td>
@@ -400,7 +400,7 @@
                                   <td>97 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Статии в Web of Science Q1 </td>
+                                  <td class="text-end">Статии в Web of Science Q1 </td>
                                   <td>2 </td>
                                   <td>2 </td>
                                   <td></td>
@@ -411,7 +411,7 @@
                                   <td>8 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Статии в Web of Science Q2 </td>
+                                  <td class="text-end">Статии в Web of Science Q2 </td>
                                   <td>1 </td>
                                   <td>3 </td>
                                   <td>1 </td>
@@ -422,7 +422,7 @@
                                   <td>12 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Статии в Web of Science Q3 </td>
+                                  <td class="text-end">Статии в Web of Science Q3 </td>
                                   <td></td>
                                   <td></td>
                                   <td>3 </td>
@@ -433,7 +433,7 @@
                                   <td>9 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Статии в Web of Science Q4 или Scopus </td>
+                                  <td class="text-end">Статии в Web of Science Q4 или Scopus </td>
                                   <td>17 </td>
                                   <td>19 </td>
                                   <td>23 </td>
@@ -444,7 +444,7 @@
                                   <td>98 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Статии в други индексирани издания </td>
+                                  <td class="text-end">Статии в други индексирани издания </td>
                                   <td>216 </td>
                                   <td>186 </td>
                                   <td>163 </td>
@@ -454,7 +454,7 @@
                                   <td>44 </td>
                                   <td>1058 </td>
                                 </tr>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Доклади <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>295 </td>
@@ -467,7 +467,7 @@
                                   <td> 1503 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Доклади в Scopus </td>
+                                  <td class="text-end">Доклади в Scopus </td>
                                   <td>1 </td>
                                   <td>9 </td>
                                   <td>16 </td>
@@ -478,7 +478,7 @@
                                   <td>79 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Доклади в Web of Science Q4 или Scopus </td>
+                                  <td class="text-end">Доклади в Web of Science Q4 или Scopus </td>
                                   <td>1 </td>
                                   <td>18 </td>
                                   <td>20 </td>
@@ -489,7 +489,7 @@
                                   <td>50 </td>
                                 </tr>
                                 <tr>
-                                  <td style="text-align: right;">Доклади в други индексирани издания </td>
+                                  <td class="text-end">Доклади в други индексирани издания </td>
                                   <td>205 </td>
                                   <td>185 </td>
                                   <td>160 </td>
@@ -499,7 +499,7 @@
                                   <td>90 </td>
                                   <td>1118 </td>
                                 </tr>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Учебници <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>17 </td>
@@ -511,7 +511,7 @@
                                   <td>3 </td>
                                   <td> 91 </td>
                                 </tr>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Учебни помагала <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>8 </td>
@@ -523,7 +523,7 @@
                                   <td>7 </td>
                                   <td> 53 </td>
                                 </tr>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Други <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>11 </td>
@@ -535,7 +535,7 @@
                                   <td>3 </td>
                                   <td> 40 </td>
                                 </tr>
-                                <tr style="font-weight:bolder;">
+                                <tr class="fw-bolder">
                                   <td>Всички <a href="#" data-toggle="tooltip" title="Общият брой публикации за годината може да бъде по-голям от сумата на прилежащите клетки в случай, че съществуват публикации с множествено индексиране ">общо:</a>
                                   </td>
                                   <td>615 </td>
@@ -578,3 +578,27 @@
     <script src="assets/js/script.js"></script>
   </body>
 </html>
+
+SELECT
+    publication_workloads.workload_period_id,
+    publication_workloads.user_id,
+    SUM(publication_workloads.hours_auditorial) AS sum_data1_left,
+    SUM(publication_workloads.hours_non_auditorial) AS sum_data2_left,
+    righttable.sum_data1,
+    righttable.sum_data2
+FROM
+    publication_workloads
+LEFT JOIN (
+    SELECT
+        workload_period_id,
+        user_id,
+        SUM(sum_auditorial_hours) AS sum_data1,
+        SUM(sum_non_auditorial_hours) AS sum_data2
+    FROM
+        publication_workload_sum_hours
+    GROUP BY
+        workload_period_id, user_id
+) AS righttable ON publication_workloads.workload_period_id = righttable.workload_period_id
+    AND publication_workloads.user_id = righttable.user_id
+GROUP BY
+    publication_workloads.workload_period_id, publication_workloads.user_id, righttable.sum_data1, righttable.sum_data2;

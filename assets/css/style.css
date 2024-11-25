@@ -36,7 +36,7 @@ body{
   background-color: var(--bs-brightgreen)!important;
 }
 
-.accordion-button:not(.collapsed){
+#stacked-menu .accordion-button:not(.collapsed){
   background-color: var(--bs-lightgreen)!important;
 }
 
@@ -48,4 +48,8 @@ body{
 
 .f-Roboto-thin{
   font-family: 'Roboto';
+}
+
+.fs-7{
+  font-size:12px;
 }
