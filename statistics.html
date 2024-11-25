@@ -578,27 +578,3 @@
     <script src="assets/js/script.js"></script>
   </body>
 </html>
-
-SELECT
-    publication_workloads.workload_period_id,
-    publication_workloads.user_id,
-    SUM(publication_workloads.hours_auditorial) AS sum_data1_left,
-    SUM(publication_workloads.hours_non_auditorial) AS sum_data2_left,
-    righttable.sum_data1,
-    righttable.sum_data2
-FROM
-    publication_workloads
-LEFT JOIN (
-    SELECT
-        workload_period_id,
-        user_id,
-        SUM(sum_auditorial_hours) AS sum_data1,
-        SUM(sum_non_auditorial_hours) AS sum_data2
-    FROM
-        publication_workload_sum_hours
-    GROUP BY
-        workload_period_id, user_id
-) AS righttable ON publication_workloads.workload_period_id = righttable.workload_period_id
-    AND publication_workloads.user_id = righttable.user_id
-GROUP BY
-    publication_workloads.workload_period_id, publication_workloads.user_id, righttable.sum_data1, righttable.sum_data2;
